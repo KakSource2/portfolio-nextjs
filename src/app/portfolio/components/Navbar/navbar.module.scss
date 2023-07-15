@@ -1,0 +1,58 @@
+@use "../../../../scss/mixins";
+@import url("https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap");
+
+.navbar {
+  height: 10vh;
+  background-color: rgb(58, 57, 57);
+  color: white;
+  display: grid;
+  grid-template-columns: 2fr 0.5fr 0.5fr;
+  align-items: center;
+  padding: 0 1rem;
+  gap: 2rem;
+
+  .logo {
+    justify-self: baseline;
+    font-size: 2rem;
+    font-family: "Lugrasimo", cursive;
+  }
+
+  .btns {
+    display: flex;
+    gap: 1rem;
+    @include mixins.max_width_height();
+
+    a {
+      @include mixins.flex-center();
+      @include mixins.max_width_height();
+
+      &:hover {
+        background-color: darkslategray;
+      }
+    }
+  }
+
+  .config {
+    @include mixins.flex-center();
+    gap: 1rem;
+    justify-self: flex-end;
+    @include mixins.max_width_height();
+
+    img {
+      width: 30px;
+    }
+    button {
+      @include mixins.flex-center();
+      @include mixins.max_width_height();
+      gap: 5px;
+
+      &:hover {
+        background-color: firebrick;
+      }
+    }
+  }
+}
+
+.light {
+  background-color: darkcyan;
+}
