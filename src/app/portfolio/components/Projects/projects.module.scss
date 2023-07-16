@@ -1,12 +1,7 @@
-// @font-face {
-//   font-family: Comforta;
-//   src: url("../../../assets/fonts/Comfortaa-VariableFont_wght.ttf");
-// }
-
-// @font-face {
-//   font-family: SlacksideOne;
-//   src: url("../assets/fonts/SlacksideOne-Regular.ttf");
-// }
+@font-face {
+  font-family: Fraunces;
+  src: url("../../../../assets/fonts/Fraunces-Italic-VariableFont_SOFT\,WONK\,opsz\,wght.ttf");
+}
 
 .article {
   display: grid;
@@ -41,7 +36,7 @@
 
   a {
     display: grid;
-    // font-family: SlacksideOne;
+    font-family: Fraunces;
     background-color: rgb(221, 221, 221);
     color: crimson;
     font-size: 1.8rem;
