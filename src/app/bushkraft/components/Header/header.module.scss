@@ -1,0 +1,183 @@
+.header {
+  background-color: black;
+  color: white;
+  main {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    align-items: center;
+    padding: 0.5rem 0.5rem;
+    h2 {
+      font-size: 3.5rem;
+      transition: 0.5s;
+      &:hover {
+        scale: 1.1;
+        transform: translateX(5%);
+        transition: 0.5s;
+      }
+
+      a {
+        text-decoration: none;
+        color: orange;
+        &:visited {
+          color: orange;
+        }
+      }
+
+      b {
+        color: firebrick;
+      }
+    }
+    .navbar {
+      display: grid;
+      gap: 0.5rem;
+      .some_btns {
+        display: flex;
+        justify-content: flex-end;
+        gap: 25px;
+        color: white;
+        a {
+          display: flex;
+          text-align: center;
+          gap: 5px;
+          align-items: center;
+          color: white;
+          &:visited {
+            color: white;
+          }
+          &:hover {
+            text-decoration: underline;
+            transform: translateY(-5%);
+            transition: 0.1s;
+            color: rgb(149, 130, 130);
+            cursor: pointer;
+          }
+        }
+      }
+      .config_btns {
+        display: flex;
+        justify-content: flex-end;
+        gap: 15px;
+
+        form {
+          display: flex;
+          width: 50%;
+          input {
+            width: 100%;
+          }
+        }
+
+        button {
+          border: none;
+          width: 75px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 0.2rem;
+          background-color: firebrick;
+          color: orange;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .news {
+    background-color: rgb(165, 32, 8);
+    color: black;
+    visibility: visible;
+
+    p {
+      text-align: center;
+      color: orange;
+      animation: popInPopOut 3s ease-in infinite;
+
+      @keyframes popInPopOut {
+        0% {
+          color: rgb(255, 166, 0);
+        }
+        50% {
+          color: rgba(255, 166, 0, 0.213);
+        }
+        100% {
+          color: rgb(255, 166, 0);
+        }
+      }
+    }
+  }
+  .menu {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 2px 2vw;
+    background-color: white;
+    border-bottom: 1px solid black;
+    .dropdown {
+      padding: 2px;
+      border: none;
+      background-color: white;
+      border: 1px solid black;
+      display: flex;
+      gap: 5px;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      &:hover {
+        background-color: firebrick;
+        color: white;
+        .dropdown_menu {
+          visibility: visible;
+          opacity: 1;
+          transform: translateY(0%);
+          transition: 0.2s;
+        }
+      }
+    }
+
+    .dropdown_menu {
+      opacity: 0;
+      visibility: hidden;
+      background-color: rgb(211, 210, 210);
+      position: absolute;
+      left: 0;
+      top: calc(100% + 0.1rem);
+      padding: 0.75rem;
+      border-radius: 0.25rem;
+      box-shadow: 0 2px 5px 0 rgb(0 0 0 / 0.1);
+      transform: translateY(-10%);
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+      gap: 0.75rem;
+      color: black;
+      transition: 0.2s;
+      max-width: 50vw;
+
+      &:hover,
+      &:focus {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    .books {
+      .dropdown_menu {
+        left: calc(0% - 55rem);
+      }
+    }
+  }
+}
+
+.light {
+  background-color: white;
+  color: black;
+  main {
+    .navbar {
+      .some_btns {
+        a {
+          color: black;
+          &:visited {
+            color: black;
+          }
+        }
+      }
+    }
+  }
+}

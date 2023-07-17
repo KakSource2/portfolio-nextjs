@@ -1,55 +1,57 @@
-import sun from "../icons/sun.png";
-import moon from "../icons/moon.png";
-import argentina from "../icons/argentina.png";
-import united_states from "../icons/united-states.png";
-import linkedin from "../icons/linkedin.png";
-import twitter from "../icons/twitter.png";
-import youtube from "../icons/youtube.png";
-import facebook from "../icons/facebook.png";
-import instagram from "../icons/instagram.png";
-import instagram_2 from "../icons/instagram-2.png";
-import css_3 from "../icons/css-3.png";
-import javascript from "../icons/js.png";
-import typescript from "../icons/typescript.png";
-import nodejs from "../icons/nodejs.png";
-import react from "../icons/physics.png";
-import treasure from "../icons/treasure.png";
-import visible from "../icons/visible.png";
-import windy from "../icons/windy.png";
-import windy_2 from "../icons/windy-2.png";
-import time_left from "../icons/time-left.png";
-import shield from "../icons/shield.png";
-import rain from "../icons/rain.png";
-import rain_2 from "../icons/rain-2.png";
-import question from "../icons/question.png";
-import play from "../icons/play-button-arrowhead.png";
-import pause from "../icons/pause.png";
-import moon_2 from "../icons/moon-2.png";
-import moon_3 from "../icons/moon-3.png";
-import menu from "../icons/menu.png";
-import menu_2 from "../icons/menu-2.png";
-import menu_3 from "../icons/menu-3.png";
-import level from "../icons/level.png";
-import level_2 from "../icons/level-2.png";
-import html5 from "../icons/html-5.png";
-import gmail from "../icons/gmail.png";
-import github from "../icons/github.png";
-import email from "../icons/email.png";
-import forward from "../icons/forward-button.png";
-import down_arrow from "../icons/down-arrow.png";
-import down_arrow_2 from "../icons/down-arrow-2.png";
-import down_arrow_red from "../icons/down-arrow-red.png";
-import diskette from "../icons/diskette.png";
-import direct_download from "../icons/direct-download.png";
-import dice from "../icons/dice.png";
-import curiosity from "../icons/curiosity.png";
-import confused from "../icons/confused.png";
-import coin from "../icons/coin.png";
-import close from "../icons/close.png";
-import check from "../icons/check.png";
-import broom from "../icons/broom.png";
-import arrowheads_left from "../icons/arrowheads-of-thin-outline-to-the-left.png";
-import acid_rain from "../icons/acid-rain.png";
+import sun from "../images/icons/sun.png";
+import moon from "../images/icons/moon.png";
+import argentina from "../images/icons/argentina.png";
+import united_states from "../images/icons/united-states.png";
+import linkedin from "../images/icons/linkedin.png";
+import twitter from "../images/icons/twitter.png";
+import youtube from "../images/icons/youtube.png";
+import facebook from "../images/icons/facebook.png";
+import instagram from "../images/icons/instagram.png";
+import instagram_2 from "../images/icons/instagram-2.png";
+import css_3 from "../images/icons/css-3.png";
+import javascript from "../images/icons/js.png";
+import typescript from "../images/icons/typescript.png";
+import nodejs from "../images/icons/nodejs.png";
+import react from "../images/icons/physics.png";
+import treasure from "../images/icons/treasure.png";
+import visible from "../images/icons/visible.png";
+import windy from "../images/icons/windy.png";
+import windy_2 from "../images/icons/windy-2.png";
+import time_left from "../images/icons/time-left.png";
+import shield from "../images/icons/shield.png";
+import rain from "../images/icons/rain.png";
+import rain_2 from "../images/icons/rain-2.png";
+import question from "../images/icons/question.png";
+import play from "../images/icons/play-button-arrowhead.png";
+import pause from "../images/icons/pause.png";
+import moon_2 from "../images/icons/moon-2.png";
+import moon_3 from "../images/icons/moon-3.png";
+import menu from "../images/icons/menu.png";
+import menu_2 from "../images/icons/menu-2.png";
+import menu_3 from "../images/icons/menu-3.png";
+import level from "../images/icons/level.png";
+import level_2 from "../images/icons/level-2.png";
+import html5 from "../images/icons/html-5.png";
+import gmail from "../images/icons/gmail.png";
+import github from "../images/icons/github.png";
+import email from "../images/icons/email.png";
+import forward from "../images/icons/forward-button.png";
+import down_arrow from "../images/icons/down-arrow.png";
+import down_arrow_2 from "../images/icons/down-arrow-2.png";
+import down_arrow_red from "../images/icons/down-arrow-red.png";
+import diskette from "../images/icons/diskette.png";
+import direct_download from "../images/icons/direct-download.png";
+import dice from "../images/icons/dice.png";
+import curiosity from "../images/icons/curiosity.png";
+import confused from "../images/icons/confused.png";
+import coin from "../images/icons/coin.png";
+import close from "../images/icons/close.png";
+import check from "../images/icons/check.png";
+import broom from "../images/icons/broom.png";
+import arrowheads_left from "../images/icons/arrowheads-of-thin-outline-to-the-left.png";
+import acid_rain from "../images/icons/acid-rain.png";
+import campfire from "../images/icons/campfire.png";
+import front_end_mentor from "../images/icons/favicon-32x32.png";
 
 import { StaticImageData } from "next/image";
 
@@ -57,14 +59,20 @@ type imageProps = {
   alt_en: string;
   alt_es: string;
   icon: StaticImageData;
-  icon_2?: StaticImageData;
-  icon_3?: StaticImageData;
+};
+
+type extraIcon = {
+  icon_2: StaticImageData;
+};
+type extraExtraIcon = {
+  icon_2: StaticImageData;
+  icon_3: StaticImageData;
 };
 
 type imagesProps = {
   dark_mode: {
     sun: imageProps;
-    moon: imageProps;
+    moon: imageProps & extraExtraIcon;
   };
   flags: {
     united_states: imageProps;
@@ -75,7 +83,7 @@ type imagesProps = {
     twitter: imageProps;
     youtube: imageProps;
     facebook: imageProps;
-    instagram: imageProps;
+    instagram: imageProps & extraIcon;
     gmail: imageProps;
     github: imageProps;
     email: imageProps;
@@ -99,22 +107,30 @@ type imagesProps = {
     direct_download: imageProps;
     close: imageProps;
     visible: imageProps;
-    down_arrow: imageProps;
-    menu: imageProps;
+    down_arrow: imageProps & extraExtraIcon;
+    menu: imageProps & extraExtraIcon;
     curiosity: imageProps;
   };
   game: {
     treasure: imageProps;
     shield: imageProps;
-    level: imageProps;
+    level: imageProps & extraIcon;
     dice: imageProps;
     coin: imageProps;
+    campfire: imageProps;
   };
-  weather: { windy: imageProps; rain: imageProps; acid_rain: imageProps };
+  weather: {
+    windy: imageProps & extraIcon;
+    rain: imageProps & extraIcon;
+    acid_rain: imageProps;
+  };
   player: {
     play: imageProps;
     pause: imageProps;
     forward: imageProps;
+  };
+  projects: {
+    front_end_mentor: imageProps;
   };
 };
 
@@ -338,6 +354,12 @@ const icons: imagesProps = {
       alt_es: "Ícono de la red social Facebook",
       icon: coin,
     },
+    campfire: {
+      alt_en:
+        "Icon from the superset of JavaScript thats made for type-safety: TypeScript ",
+      alt_es: "Ícono de la red social Facebook",
+      icon: campfire,
+    },
   },
   weather: {
     windy: {
@@ -380,6 +402,14 @@ const icons: imagesProps = {
         "Icon from the superset of JavaScript thats made for type-safety: TypeScript ",
       alt_es: "Ícono de la red social Facebook",
       icon: forward,
+    },
+  },
+  projects: {
+    front_end_mentor: {
+      alt_en:
+        "Icon from the superset of JavaScript thats made for type-safety: TypeScript ",
+      alt_es: "Ícono de la red social Facebook",
+      icon: front_end_mentor,
     },
   },
 };

@@ -1,0 +1,67 @@
+.bushkraft {
+  display: grid;
+  background-color: white;
+  border: 1px solid black;
+  grid-template-columns: 2fr 1fr;
+  height: 90vh;
+  gap: 10px;
+  padding: 0.5rem;
+
+  .offers {
+    display: grid;
+    justify-items: center;
+    grid-template-rows: 1fr 4fr 4fr;
+    width: 100%;
+    gap: 10px;
+    padding: 1rem;
+    border: 1px solid black;
+
+    .deals {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      width: 100%;
+      justify-items: center;
+
+      div {
+        border: 1px solid black;
+      }
+    }
+
+    .special_deal {
+      display: grid;
+      border: 1px solid black;
+      width: 100%;
+      justify-items: center;
+    }
+  }
+  .suggestions {
+    display: grid;
+    gap: 10px;
+    padding: 1rem;
+    border: 1px solid black;
+
+    div {
+      display: grid;
+      justify-items: center;
+      align-items: center;
+      color: white;
+      font-size: 1.6rem;
+      font-weight: 600;
+      cursor: pointer;
+
+      &:hover {
+        color: orange;
+      }
+    }
+    div:last-child {
+      color: white;
+      &:hover {
+        color: rgb(255, 230, 0);
+      }
+    }
+  }
+
+  .featured {
+    grid-column: 1 / 2;
+  }
+}

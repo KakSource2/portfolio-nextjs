@@ -11,6 +11,328 @@ import question from "../apps/test/question.png";
 import who from "../apps/test/who.png";
 import why from "../apps/test/why.png";
 import { randomNumberBetween } from "./random_numbers";
+import fem__interactive_rating from "../images/apps/front-end-mentor/interactive-rating.png";
+import fem__results_summary from "../images/apps/front-end-mentor/results-summary.png";
+import fem__advice_generator from "../images/apps/front-end-mentor/Advice Generator.png";
+import fem__article_preview from "../images/apps/front-end-mentor/Article Preview.png";
+import fem__base_apparel_coming_soon from "../images/apps/front-end-mentor/BaseApparel - Coming Soon.png";
+import fem__3_column_card from "../images/apps/front-end-mentor/3 column card.png";
+import fem__product_preview from "../images/apps/front-end-mentor/ProductPreview.png";
+import fem__age_calculator from "../images/apps/front-end-mentor/age calculator.png";
+import fem__qr from "../images/apps/front-end-mentor/QR.png";
+import fem__expenses_chart from "../images/apps/front-end-mentor/Expenses Chart.png";
+
+type challenges = {
+  id: number;
+  name: { es: string; en: string };
+  link: string;
+  img?: StaticImageData;
+  wip: boolean;
+}[];
+
+const fem_challenges: challenges = [
+  {
+    id: 1,
+    name: { es: "Puntuación interactiva", en: "Interactive rating" },
+    link: "/front-end-mentor/interactive-rating",
+    img: fem__interactive_rating,
+    wip: false,
+  },
+  {
+    id: 2,
+    name: { es: "Vista previa producto", en: "Product preview" },
+    link: "/front-end-mentor/product-preview",
+    wip: false,
+    img: fem__product_preview,
+  },
+  {
+    id: 3,
+    name: { es: "Sumario resultado", en: "Result summary" },
+    link: "/front-end-mentor/results-summary",
+    img: fem__results_summary,
+    wip: false,
+  },
+  {
+    id: 4,
+    name: { es: "Carta en columna de 3", en: "3 column card" },
+    link: "/front-end-mentor/3-column-card",
+    wip: false,
+    img: fem__3_column_card,
+  },
+  {
+    id: 5,
+    name: { es: "Generador de consejos", en: "Advice generator" },
+    link: "/front-end-mentor/advice-generator",
+    wip: false,
+    img: fem__advice_generator,
+  },
+  {
+    id: 6,
+    name: { es: "Calculador de edad", en: "Age calculator" },
+    link: "/front-end-mentor/age-calculator",
+    wip: false,
+    img: fem__age_calculator,
+  },
+  {
+    id: 7,
+    name: { es: "Vista previa de artículo", en: "Article preview" },
+    link: "/front-end-mentor/article-preview",
+    wip: false,
+    img: fem__article_preview,
+  },
+  {
+    id: 9,
+    name: {
+      es: "BaseApparel - Vuelvo pronto",
+      en: "BaseApparel - Coming Soon",
+    },
+    link: "/front-end-mentor/base-apparel-coming-soon",
+    wip: false,
+    img: fem__base_apparel_coming_soon,
+  },
+  {
+    id: 10,
+    name: { es: "Blogr", en: "Blogr" },
+    link: "/front-end-mentor/blogr-landing-page",
+    wip: true,
+  },
+  {
+    id: 11,
+    name: {
+      es: "Coding Bootcamp Testimonios",
+      en: "Coding Bootcamps Testimonials",
+    },
+    link: "/front-end-mentor/coding-bootcamp-testimonials",
+    wip: true,
+  },
+  {
+    id: 12,
+    name: {
+      es: "Producto de recaudación de fondos",
+      en: "Crowfunding Products",
+    },
+    link: "/front-end-mentor/crowfunding-product",
+    wip: true,
+  },
+  {
+    id: 13,
+    name: { es: "Cuadro de expensas", en: "Expenses chart" },
+    link: "/front-end-mentor/expenses-chart",
+    wip: false,
+    img: fem__expenses_chart,
+  },
+  {
+    id: 14,
+    name: { es: "Acordión FAQ", en: "FAQ Accordion" },
+    link: "/front-end-mentor/faq-accordion",
+    wip: true,
+  },
+  {
+    id: 15,
+    name: { es: "Sección de cuatro cartas", en: "Four card feature section" },
+    link: "/front-end-mentor/four-card-feature-section",
+    wip: true,
+  },
+  {
+    id: 16,
+    name: {
+      es: "Fylo Landing Page version oscura",
+      en: "Fylo Dark Theme Landing Page",
+    },
+    link: "/front-end-mentor/fylo-dark-theme-landing-page",
+    wip: true,
+  },
+  {
+    id: 17,
+    name: { es: "Fylo almacenamiento de datos", en: "Fylo Data Storage" },
+    link: "/front-end-mentor/fylo-data-storage",
+    wip: true,
+  },
+  {
+    id: 18,
+    name: {
+      es: "Fylo landing page doble columna",
+      en: "Fylo Landing Page 2 column",
+    },
+    link: "/front-end-mentor/fylo-landing-page-2-column",
+    wip: true,
+  },
+  {
+    id: 19,
+    name: {
+      es: "Huddle landing page alternativo",
+      en: "Huddle Landing Page Alternative",
+    },
+    link: "/front-end-mentor/huddle-landing-page",
+    wip: true,
+  },
+  {
+    id: 20,
+    name: {
+      es: "Huddle Landing Page Curvado",
+      en: "Huddle Landing Page Curved",
+    },
+    link: "/front-end-mentor/huddle-landing-page-single-introduction",
+    wip: true,
+  },
+  {
+    id: 21,
+    name: {
+      es: "Huddle Landing Page introducción única",
+      en: "Huddle Landing Page Single Introduction",
+    },
+    link: "/front-end-mentor/insure-landing-page",
+    wip: true,
+  },
+  {
+    id: 22,
+    name: { es: "Insure Landing Page", en: "Insure Landing Page" },
+    link: "/front-end-mentor/article-preview",
+    wip: true,
+  },
+  {
+    id: 23,
+    name: { es: "Carta interactiva", en: "Interactive Card" },
+    link: "/front-end-mentor/interactive-card",
+    wip: true,
+  },
+  {
+    id: 24,
+    name: { es: "Precios interactivos", en: "Interactive pricing" },
+    link: "/front-end-mentor/interactive-pricing",
+    wip: false,
+  },
+  {
+    id: 25,
+    name: {
+      es: "Seccion introductoria con navegación",
+      en: "Intro section dropdown nav",
+    },
+    link: "/front-end-mentor/article-preview",
+    wip: true,
+  },
+  {
+    id: 26,
+    name: { es: "Formulario de registro", en: "Intro signup form" },
+    link: "/front-end-mentor/article-preview",
+    wip: true,
+  },
+  {
+    id: 27,
+    name: { es: "Loopstudio landing page", en: "Loopstudio landing page" },
+    link: "/front-end-mentor/article-preview",
+    wip: true,
+  },
+  {
+    id: 28,
+    name: { es: "Noticias", en: "News" },
+    link: "/front-end-mentor/article-preview",
+    wip: true,
+  },
+  {
+    id: 29,
+    name: { es: "", en: "Newsletter signup with success" },
+    link: "/front-end-mentor/article-preview",
+    wip: true,
+  },
+  {
+    id: 30,
+    name: { es: "Carta NFT", en: "NFT Card" },
+    link: "/front-end-mentor/article-preview",
+    wip: true,
+  },
+  {
+    id: 31,
+    name: { es: "Página de notificaciones", en: "Notifications page" },
+    link: "/front-end-mentor/article-preview",
+    wip: true,
+  },
+  {
+    id: 32,
+    name: { es: "Sumario ordenado", en: "Order summary" },
+    link: "/front-end-mentor/article-preview",
+    wip: true,
+  },
+  {
+    id: 33,
+    name: { es: "", en: "Ping Coming Soon" },
+    link: "/front-end-mentor/article-preview",
+    wip: true,
+  },
+  {
+    id: 34,
+    name: { es: "", en: "Pricing with toggle" },
+    link: "/front-end-mentor/article-preview",
+    wip: true,
+  },
+  {
+    id: 35,
+    name: { es: "Tarjeta perfil", en: "Profile card" },
+    link: "/front-end-mentor/profile-card",
+    wip: false,
+  },
+  {
+    id: 36,
+    name: { es: "", en: "Project tracking intro" },
+    link: "/front-end-mentor/article-preview",
+    wip: true,
+  },
+  {
+    id: 37,
+    name: { es: "QR", en: "QR" },
+    link: "/front-end-mentor/qr",
+    wip: false,
+    img: fem__qr,
+  },
+  {
+    id: 38,
+    name: { es: "", en: "Single price grid" },
+    link: "/front-end-mentor/article-preview",
+    wip: true,
+  },
+  {
+    id: 39,
+    name: { es: "", en: "Social media dashboard" },
+    link: "/front-end-mentor/article-preview",
+    wip: true,
+  },
+  {
+    id: 40,
+    name: { es: "", en: "Social proof" },
+    link: "/front-end-mentor/article-preview",
+    wip: true,
+  },
+  {
+    id: 41,
+    name: { es: "", en: "Stats preview" },
+    link: "/front-end-mentor/article-preview",
+    wip: true,
+  },
+  {
+    id: 42,
+    name: { es: "", en: "Sunnyside agency" },
+    link: "/front-end-mentor/article-preview",
+    wip: true,
+  },
+  {
+    id: 43,
+    name: { es: "", en: "Testimonials grid" },
+    link: "/front-end-mentor/article-preview",
+    wip: true,
+  },
+  {
+    id: 44,
+    name: { es: "", en: "Time tracking" },
+    link: "/front-end-mentor/article-preview",
+    wip: true,
+  },
+  {
+    id: 45,
+    name: { es: "", en: "Tip calculator" },
+    link: "/front-end-mentor/article-preview",
+    wip: true,
+  },
+];
 
 type appProps = {
   id: number;
@@ -21,6 +343,7 @@ type appProps = {
   alt_en: string;
   alt_es: string;
   link: string;
+  projects?: challenges;
 };
 
 const test_names = [
@@ -90,6 +413,7 @@ const apps: appProps[] = [
     alt_en: "",
     alt_es: "",
     link: "",
+    projects: fem_challenges,
   },
   {
     id: 3,
