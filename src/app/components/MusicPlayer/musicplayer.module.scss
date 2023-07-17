@@ -1,0 +1,40 @@
+.music_player {
+  display: grid;
+  height: 20rem;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 35vw;
+  height: 8rem;
+  background-color: green;
+  border-radius: 1rem;
+
+  h2 {
+    text-align: center;
+  }
+
+  .buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+
+    img {
+      display: block;
+      width: 25px;
+    }
+  }
+
+  .close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border-radius: 1rem;
+    border: none;
+
+    img {
+      display: block;
+      max-width: 100%;
+      padding: 0.5rem;
+    }
+  }
+}

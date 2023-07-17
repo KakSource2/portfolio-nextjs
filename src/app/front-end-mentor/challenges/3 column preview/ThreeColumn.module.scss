@@ -1,0 +1,85 @@
+.threecolumn {
+  display: flex;
+  padding: 4rem;
+  background-color: black;
+  min-height: 90vh;
+  justify-content: center;
+  align-items: center;
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 80%;
+    min-height: 50vh;
+
+    > div {
+      display: grid;
+      gap: 2rem;
+      padding: 2rem 2rem;
+      font-size: 15px;
+      width: 100%;
+
+      div {
+        display: grid;
+        gap: 0.3rem;
+      }
+
+      h2,
+      button {
+        color: hsl(0, 0%, 95%);
+      }
+
+      button {
+        width: 65%;
+        border-radius: 1rem;
+        cursor: pointer;
+        height: 100%;
+        background-color: hsla(0, 0%, 100%, 0);
+        height: 45px;
+        border: 2px solid white;
+        align-self: flex-end;
+
+        &:hover {
+          border-color: black;
+          color: black;
+          box-shadow: 0 0.125rem 1rem rgb(0 0 0 /1);
+        }
+      }
+
+      p {
+        color: hsla(0, 0%, 100%, 0.75);
+      }
+    }
+
+    > div:first-child {
+      background: hsl(31, 77%, 52%);
+    }
+    > div:nth-child(2) {
+      background: hsl(184, 100%, 22%);
+    }
+    > div:last-child {
+      background: hsl(179, 100%, 13%);
+
+      button {
+        &:hover {
+          border-color: white;
+          color: white;
+          box-shadow: 0 0.125rem 1rem rgb(255, 255, 255);
+        }
+      }
+    }
+  }
+
+  @media (max-width: 800px) {
+    padding: 4rem 2rem;
+    main {
+      grid-template-columns: 1fr;
+      height: auto;
+      width: 90%;
+    }
+  }
+}
+
+.light {
+  background-color: white;
+}

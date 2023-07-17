@@ -1,0 +1,101 @@
+.interactivepricing {
+  display: grid;
+  justify-items: center;
+  gap: 3rem;
+  padding: 4rem;
+  height: 90vh;
+  background-color: hsl(230, 100%, 99%);
+
+  .title {
+    position: relative;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    h2 {
+      font-size: 1.8rem;
+    }
+    p {
+      font-size: 1rem;
+      color: rgba(0, 0, 0, 0.363);
+    }
+    img {
+      position: absolute;
+      width: 30%;
+    }
+  }
+
+  main {
+    border: 1px solid rgb(27, 27, 81);
+    width: 40vw;
+    height: 45vh;
+    display: grid;
+    justify-items: center;
+    padding: 1rem 0;
+    grid-template-rows: 1fr 1fr 0.3fr 1fr;
+    padding: 0 3rem;
+    padding-top: 1rem;
+
+    .pageviews {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+
+      p {
+        font-size: 1rem;
+      }
+      span {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        font-size: 3rem;
+        color: rgb(3, 3, 69);
+        gap: 0.2rem;
+        p {
+          font-size: 0.8rem;
+          color: gray;
+        }
+      }
+    }
+
+    .advertisement {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+      font-size: 0.8rem;
+
+      div {
+        display: grid;
+        gap: 5px;
+        color: gray;
+      }
+
+      button {
+        align-self: center;
+        height: 2rem;
+        border-radius: 1rem;
+        background-color: rgb(17, 1, 77);
+        color: white;
+        border: none;
+      }
+    }
+    .monthly_billing {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: flex-end;
+      font-size: 0.8rem;
+      gap: 0.2rem;
+
+      p:last-child {
+        background-color: rgba(255, 166, 0, 0.303);
+        color: orange;
+        padding: 0.2rem;
+        font-size: 0.7rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,101 @@
+.expenseschart {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  height: 90vh;
+  background-color: rgb(202, 183, 186);
+  position: relative;
+
+  > button {
+    position: absolute;
+    top: 2%;
+    width: 5rem;
+    height: 2rem;
+  }
+
+  main {
+    display: grid;
+    grid-template-rows: 2fr 8fr;
+    height: 70vh;
+    width: 40vw;
+    border-radius: 15px;
+    gap: 1rem;
+
+    .balance {
+      display: grid;
+      justify-items: baseline;
+      align-items: center;
+      grid-template-columns: 1fr 1fr;
+      height: 4rem;
+      width: 100%;
+      padding: 0 2rem;
+      background-color: tomato;
+      border-radius: 15px;
+
+      > div {
+        display: grid;
+        gap: 5px;
+        p {
+          font-size: 0.7rem;
+        }
+        span {
+          font-size: 1.5rem;
+        }
+      }
+
+      img {
+        justify-self: flex-end;
+        display: block;
+        height: 50%;
+      }
+    }
+
+    .container {
+      display: grid;
+      grid-template-rows: 4fr 1fr;
+      padding: 1rem;
+      border-radius: 15px;
+      background-color: white;
+
+      .spendings {
+        display: grid;
+        grid-template-rows: 1fr 6fr;
+
+        div {
+          display: grid;
+          grid-template-columns: repeat(7, 1fr);
+          gap: 5px;
+
+          span {
+            display: grid;
+            justify-items: center;
+            grid-template-rows: 9fr 1fr;
+            div {
+              border-radius: 15px;
+            }
+            p {
+              color: red;
+            }
+          }
+        }
+      }
+    }
+    .last {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+
+      .price {
+        span {
+          font-size: 2rem;
+        }
+      }
+
+      .discount {
+        display: grid;
+        justify-items: flex-end;
+        padding: 0 1rem;
+      }
+    }
+  }
+}

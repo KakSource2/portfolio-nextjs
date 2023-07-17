@@ -1,0 +1,43 @@
+.interactive_card {
+  display: grid;
+  grid-template-columns: 3fr 7fr;
+  max-height: 90vh;
+  background-color: white;
+
+  > div {
+    position: relative;
+    img {
+      max-width: 100%;
+      display: block;
+      height: 100%;
+    }
+  }
+
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    form {
+      height: 5rem;
+      border: 1px solid black;
+      display: grid;
+      justify-items: center;
+      align-items: center;
+      height: 50%;
+    }
+  }
+
+  .cards {
+    position: absolute;
+    display: grid;
+    gap: 1rem;
+    transform: translateX(50%) translateY(25%);
+    img {
+      width: 80%;
+    }
+
+    img:last-child {
+      justify-self: flex-end;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.materialui {
+  height: 100vh;
+
+  .buttons {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 25px;
+  }
+}

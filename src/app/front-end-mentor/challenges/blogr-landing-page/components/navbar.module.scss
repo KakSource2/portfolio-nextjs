@@ -1,0 +1,71 @@
+.navbar {
+  display: grid;
+  padding: 1rem 6rem;
+  color: white;
+  height: 50vh;
+  background-color: salmon;
+  border-radius: 0 0 0 2.5rem;
+  grid-template-rows: 1fr 9fr;
+
+  div {
+    display: grid;
+    grid-template-columns: 0.2fr 1fr 1fr;
+    gap: 15px;
+    align-items: end;
+
+    .logo {
+      font-size: 1.6rem;
+    }
+
+    div {
+      justify-self: end;
+
+      button {
+        width: 80px;
+        height: 35px;
+        border-radius: 1rem;
+        border: none;
+      }
+      button:first-child {
+        background-color: rgba(255, 255, 255, 0);
+        color: white;
+      }
+    }
+
+    ul {
+      display: flex;
+      gap: 0.6rem;
+      list-style: none;
+    }
+  }
+
+  main {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    padding: 5rem;
+    gap: 10px;
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    div {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      button {
+        height: 30px;
+        width: 6rem;
+        border-radius: 2rem;
+        border: none;
+      }
+
+      button:last-child {
+        border: 1px solid white;
+        background-color: rgba(250, 128, 114, 0);
+        color: white;
+      }
+    }
+  }
+}

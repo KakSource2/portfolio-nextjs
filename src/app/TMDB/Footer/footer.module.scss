@@ -1,0 +1,30 @@
+.footer {
+  display: grid;
+  padding: 2rem;
+  border-top: 2px solid rgb(0, 0, 0);
+  text-align: center;
+  gap: 15px;
+
+  main {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    text-align: center;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+
+    a {
+      transition: 0.2s;
+      &:hover {
+        transition: 0.2s;
+        scale: 1.2;
+        transform: translateY(-5%);
+      }
+    }
+
+    img {
+      max-width: 50px;
+      height: 100%;
+    }
+  }
+}
